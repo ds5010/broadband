@@ -20,6 +20,6 @@
 
 # URLs
 
-* githubusercontent.com/ds5010/broadband/data/<county>/<type>.json
+* githubusercontent.com/ds5010/broadband/data/*county*/*type*.json
   * for example: githubusercontent.com/ds5010/broadband/data/Androscoggin/eligible.json
   * another: githubusercontent.com/ds5010/broadband/data/Kennebec/tier2.json
