@@ -3,6 +3,14 @@
 
 More info here: http://github.com/pbogden/broadband
 
+## Goals
+
+* Represent current investments 
+* Demonstrate community readiness
+* Highlight unconnected / unserved areas
+* Demonstrate connectivity in context of other socio-economic demographics
+* Representation of wireless offerings in context of unconnected / unserved.  
+
 ## Data
 
 Right now, there are 3 data sources:
