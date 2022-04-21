@@ -1,7 +1,7 @@
 
 # broadband
 
-More info here: http://github.com/pbogden/broadband
+A student project at the [Roux Institute](https://roux.northeastern.edu/) in support of the [Maine Connectivity Authority](https://www.maineconnectivity.org/).
 
 ## Goals
 
