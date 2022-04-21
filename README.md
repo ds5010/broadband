@@ -15,7 +15,7 @@ A student project at the [Roux Institute](https://roux.northeastern.edu/) in sup
 
 Right now, there are 3 data sources:
 
-1. Sewall data -- Use these
+1. Sewall data
 
 <img src="figs/image.png" width="400px">
 
@@ -24,7 +24,7 @@ Right now, there are 3 data sources:
 
 <img src="figs/image2.png" width="400px">
 
-3. Broadband Investment Zone data -- Use these
+3. Broadband Investment Zone data
 
 <img src="figs/image3.png" width="400px">
 
