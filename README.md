@@ -15,16 +15,16 @@ More info here: http://github.com/pbogden/broadband
 
 Right now, there are 3 data sources:
 
-1. Sewall data -- Okay for public use
+1. Sewall data -- Use these
 
 <img src="figs/image.png" width="400px">
 
-2. Grant rounds data -- NOT FOR PUBLIC USE
+2. Grant rounds data -- POLYGONS ONLY!
 * Polygons (eligible areas) -- These *can* be used
 
 <img src="figs/image2.png" width="400px">
 
-3. Broadband Investment Zone data -- Okay for public use
+3. Broadband Investment Zone data -- Use these
 
 <img src="figs/image3.png" width="400px">
 
