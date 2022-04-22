@@ -62,10 +62,9 @@
       </div><!-- /.col -->
     </div><!-- /.row -->
 
-    <div id="visuals" class="row align-items-md-stretch p-2">
-      <div class="col-md-12">
-        <div class="clearfix">
-          <img src="img/tiers.png" style='float:right; margin-right:10px;'>
+    <div id="visuals" class="row align-items-md-stretch p-1">
+      <div class="col-md-6 p-1 border">
+        <div class="h-100 p-5">
           <h2>Internet speed varies across Maine.</h2>
           <p>With rare exceptions, the internet that reaches your house must travel through a series of connections
             along existing roadways. The speed of the connection depends on a variety of factors, including the age of
@@ -91,6 +90,15 @@
             areas. Within each focus area are issue specific Impact targets relative to health, education, and
             economic opportunity outcomes.
           </p>
+        </div>
+      </div><!-- /.col -->
+
+      <div class="col-md-6 p-1 border">
+        <div class="h-100 p-5">
+          <h2></h2>
+          <div>
+            <img src="img/tiers.png" class="img-fluid">
+          </div>
         </div>
       </div><!-- /.col -->
     </div><!-- /.row -->
