@@ -2,11 +2,6 @@
 # broadband
 A student project at the [Roux Institute](https://roux.northeastern.edu/) in support of the [Maine Connectivity Authority](https://www.maineconnectivity.org/) (MCA).
 
-<img src="docs/img/tiers.png" width="400px" height='400px'>
-
-<img src="docs/img/county.png" width="400px">
-
-
 ## Overview
 This repository aims to visualize and explore broadband access in Maine. Current broadband access varies across Maine, creating the need for county-level and state-level data visuals to provide support for the MCA's projects. 
 
