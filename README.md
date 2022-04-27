@@ -11,11 +11,11 @@ This repository aims to visualize and explore broadband access in Maine. Current
 This visualization represents the MCA's current broadband investments throughout the state. The different tiers demonstrate varying levels of broadband access, with 0 being the lowest level of access and 5 being the highest.
 
 ### County-level 
-<img src="docs/img/county.png" width="400px">
+<img src="docs/img/county.png" width="400px" width="450px">
 
 This interactive visualization represents the MCA's current broadband investments on a county-level. The different layers show underserved areas, maybe underserved areas, density of unserved areas, as well as the same access-tiers as the state-level visual. 
 
-The map is able to be interacted with in the browser, allowing the user to select the county and relevant layers. 
+The map is able to be interacted with in the browser, allowing the user to select the county and relevant layers. Please view the interactive map [here](https://ds5010.github.io/broadband/).
 
 ## Data
 The data used to generate the layers is geospatial data provided by the MCA. 
