@@ -99,21 +99,23 @@
       <div class="col-md-3 p-1">
         <div class="h-100 p-5 bg-light border rounded-3">
           <p class="fs-4">Select a County</p>
-          <div id="observable-county" class="pb-3">
+          <div id="observable-counties" class="pb-3">
           </div>
-          <p class="fs-4">Select a Data Source</p>
           <div id="observable-buttons" class="pb-3">
           </div>
+          <p class="fs-4">Select a Data Source</p>
+          <div id="observable-type" class="pb-3">
+          </div>
           <p class="fs-4">Instructions</p>
-          <p>Click on a county in the map above to change geographic focus of the map on the right. Use the radio
-            buttons above to view different sets of data.</p>
+          <p>Select a county to change geographic focus of the map on the right. 
+             Select a data source to view different layers on top of the map.</p>
         </div>
       </div><!-- /.col -->
 
       <div class="col-md-9 p-1">
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2>Map</h2>
-          <div id="observable-map" class="ratio ratio-4x3">
+          <div id="observable-map" class="ratio ratio-1x1">
           </div>
           <p class="fs-4">Methodology</p>
           <p>This map visualizes internet tier and underserved areas on a county-by-county basis. By breaking down the
@@ -161,16 +163,20 @@
 
     // Load the notebook, rendering the value of each cell into the provided DOM node.
     new Runtime().module(notebook, name => {
-      if (name === "mycounty") {
-        return new Inspector(document.querySelector("#observable-county"));
+      if (name === "viewof counties") {
+//        return new Inspector(document.querySelector("#observable-counties"));
       }
       if (name === "map") {
         return new Inspector(document.querySelector("#observable-map"));
       }
       if (name === "viewof type") {
+        return new Inspector(document.querySelector("#observable-type"));
+      }
+      if (name === "viewof buttons") {
         return new Inspector(document.querySelector("#observable-buttons"));
       }
       if (name === "data") return true;
+      if (name === "initialize") return true;
     });
 
   </script>
