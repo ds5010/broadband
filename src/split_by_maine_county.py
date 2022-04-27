@@ -1,17 +1,19 @@
 import geopandas as gpd
 from pathlib import Path
 
-Maine_County=gpd.read_file('Maine_County_Boundary_Polygons_Dissolved_Feature.geojson')
-layers_dict = {'eligible':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/eligible-areas-2-22-layer-G8qemhB46k7dh-m1XZ2JM.zip'),
-'may_unserved':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/may-be-unserved-layer-gpC0SCaV9wS6W-zZCePjz.zip'),
-'may_unserved_density':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/density-of-unserved-may-be-layer-UKtUhvoEC95KBH6HsnWIU.zip'),
-'unserved':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/unserved-layer-R8i8goNVLFFHfh1Xun4rj.zip'),
-'tier_0':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/tier-0-no-address-range-layer-jLQPM-g3RfNthOkroK_Mf.zip'),
-'tier_1':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/tier-1-0-10-1-layer-2Vbn3XwU7ghduyFrvsX3i.zip'),
-'tier_2':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/tier-2-10-1-25-3-layer-8lhS3piFE8p5Sof4IZ4C0.zip'),
-'tier_3':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/tier-3-25-3-50-10-layer-axu8CkkozyfVxf5kjgcSY.zip'),
-'tier_4':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/tier-4-50-10-100-100-layer--pCgIFfvOkurYcKDZ1Db7.zip'),
-'tier_5':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/tier-5-100-m-layer-zo2lbPrGRte_B5Ug-kEqS.zip')}
+Maine_County=gpd.read_file('src/county_boundaries/Maine_County_Boundary_Polygons_Dissolved_Feature.geojson')
+layers_dict = {
+    'eligible':gpd.read_file('src/raw_data/eligible-areas-2-22-layer-G8qemhB46k7dh-m1XZ2JM.zip'),
+    'may_unserved':gpd.read_file('src/raw_data/may-be-unserved-layer-gpC0SCaV9wS6W-zZCePjz.zip'),
+    'may_unserved_density':gpd.read_file('src/raw_data/density-of-unserved-may-be-layer-UKtUhvoEC95KBH6HsnWIU.zip'),
+    'unserved':gpd.read_file('src/raw_data/unserved-layer-R8i8goNVLFFHfh1Xun4rj.zip'),
+    'tier_0':gpd.read_file('src/raw_data/tier-0-no-address-range-layer-jLQPM-g3RfNthOkroK_Mf.zip'),
+    'tier_1':gpd.read_file('src/raw_data/tier-1-0-10-1-layer-2Vbn3XwU7ghduyFrvsX3i.zip'),
+    'tier_2':gpd.read_file('src/raw_data/tier-2-10-1-25-3-layer-8lhS3piFE8p5Sof4IZ4C0.zip'),
+    'tier_3':gpd.read_file('src/raw_data/tier-3-25-3-50-10-layer-axu8CkkozyfVxf5kjgcSY.zip'),
+    'tier_4':gpd.read_file('src/raw_data/tier-4-50-10-100-100-layer--pCgIFfvOkurYcKDZ1Db7.zip'),
+    'tier_5':gpd.read_file('src/raw_data/tier-5-100-m-layer-zo2lbPrGRte_B5Ug-kEqS.zip')
+    }
 
 
 maine_county_dict={}
