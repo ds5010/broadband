@@ -6,7 +6,7 @@ A student project at the [Roux Institute](https://roux.northeastern.edu/) in sup
 This repository aims to visualize and explore broadband access in Maine. Current broadband access varies across Maine, creating the need for county-level and state-level data visuals to provide support for the MCA's projects. 
 
 ### State-level
-<img src="docs/img/tiers.png" width="400px" height='400px'>
+<img src="docs/img/tiers.png" width="400px" height='450px'>
 
 This visualization represents the MCA's current broadband investments throughout the state. The different tiers demonstrate varying levels of broadband access, with 0 being the lowest level of access and 5 being the highest.
 
