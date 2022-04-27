@@ -2,7 +2,7 @@ import geopandas as gpd
 from pathlib import Path
 
 Maine_County=gpd.read_file('Maine_County_Boundary_Polygons_Dissolved_Feature.geojson')
-layers_dict = {'elegible':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/eligible-areas-2-22-layer-G8qemhB46k7dh-m1XZ2JM.zip'),
+layers_dict = {'eligible':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/eligible-areas-2-22-layer-G8qemhB46k7dh-m1XZ2JM.zip'),
 'may_unserved':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/may-be-unserved-layer-gpC0SCaV9wS6W-zZCePjz.zip'),
 'may_unserved_density':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/density-of-unserved-may-be-layer-UKtUhvoEC95KBH6HsnWIU.zip'),
 'unserved':gpd.read_file('https://raw.githubusercontent.com/ds5010/broadband/master/zipfiles/unserved-layer-R8i8goNVLFFHfh1Xun4rj.zip'),
