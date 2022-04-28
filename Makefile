@@ -1,7 +1,7 @@
 #The entire dataset split into the county-level subsets store in different counties
 county data:
 	mkdir -p county
-image;
+img:
 	mkdir -p img
 # All source codes store into this folder
 src:
