@@ -1,32 +1,29 @@
 import geopandas as gpd
 from pathlib import Path
 
-Maine_County=gpd.read_file('src/county_boundaries/Maine_County_Boundary_Polygons_Dissolved_Feature.geojson')
-layers_dict = {
-    'eligible':gpd.read_file('src/raw_data/eligible-areas-2-22-layer-G8qemhB46k7dh-m1XZ2JM.zip'),
-    'may_unserved':gpd.read_file('src/raw_data/may-be-unserved-layer-gpC0SCaV9wS6W-zZCePjz.zip'),
-    'may_unserved_density':gpd.read_file('src/raw_data/density-of-unserved-may-be-layer-UKtUhvoEC95KBH6HsnWIU.zip'),
-    'unserved':gpd.read_file('src/raw_data/unserved-layer-R8i8goNVLFFHfh1Xun4rj.zip'),
-    'tier_0':gpd.read_file('src/raw_data/tier-0-no-address-range-layer-jLQPM-g3RfNthOkroK_Mf.zip'),
-    'tier_1':gpd.read_file('src/raw_data/tier-1-0-10-1-layer-2Vbn3XwU7ghduyFrvsX3i.zip'),
-    'tier_2':gpd.read_file('src/raw_data/tier-2-10-1-25-3-layer-8lhS3piFE8p5Sof4IZ4C0.zip'),
-    'tier_3':gpd.read_file('src/raw_data/tier-3-25-3-50-10-layer-axu8CkkozyfVxf5kjgcSY.zip'),
-    'tier_4':gpd.read_file('src/raw_data/tier-4-50-10-100-100-layer--pCgIFfvOkurYcKDZ1Db7.zip'),
-    'tier_5':gpd.read_file('src/raw_data/tier-5-100-m-layer-zo2lbPrGRte_B5Ug-kEqS.zip')
-    }
+from pytz import country_names
 
+def list_files(dir):
+    files = []
+    for item in dir.iterdir():
+        if item.is_file():
+            files.append(item)
+    return files
 
-maine_county_dict={}
-for i,row in Maine_County.iterrows():
-    maine_county_dict[row['COUNTY']]=row.geometry
+def get_files(list):
+    layers_dict = {}
+    for file in list:
+        layers_dict[file.stem] = gpd.read_file(file)
+        print(file.name, " read successfully")
+    return layers_dict
 
-def store_county_data_to_file(county_name,layers,layer_name):
+def store_county_data_to_file(county_dict, county_name,layers,layer_name):
     data_layer = layers[layer_name]
     data_layer['centroid_column']=data_layer.centroid
     data_layer=data_layer.set_geometry('centroid_column')   
     gdf_list=[]
     for index,i in data_layer.iterrows(): 
-        if i.centroid_column.within(maine_county_dict[county_name]):
+        if i.centroid_column.within(county_dict[county_name]):
             gdf_list.append(i)
     gdf=gpd.GeoDataFrame(gdf_list)
     del gdf['centroid_column']
@@ -34,7 +31,20 @@ def store_county_data_to_file(county_name,layers,layer_name):
 
     gdf.to_file('county/'+county_name+'/'+county_name+'_'+layer_name+'.geojson')
 
-for file in layers_dict:
-    for i in maine_county_dict:
-        Path("county/"+i+'/').mkdir(parents=True, exist_ok=True)
-        store_county_data_to_file(i,layers_dict,file)
+def main():
+    zip_dir = Path('zip/')
+    county_path= Path('zip/county_boundaries/Maine_County_Boundary_Polygons_Dissolved_Feature.geojson')
+    county_polygons=gpd.read_file(county_path)
+    
+    county_dict={}
+    for i,row in county_polygons.iterrows():
+        county_dict[row['COUNTY']]=row.geometry
+    
+    layers_dict = get_files(list_files(zip_dir))
+    for file in layers_dict:
+        for i in county_dict:
+            Path("county/"+i+'/').mkdir(parents=True, exist_ok=True)
+            store_county_data_to_file(county_dict,i,layers_dict,file)
+
+if __name__ == '__main__':
+    main()
