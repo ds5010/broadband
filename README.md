@@ -6,12 +6,12 @@ A student project at the [Roux Institute](https://roux.northeastern.edu/) in sup
 This repository aims to visualize and explore broadband access in Maine. Current broadband access varies across Maine, creating the need for county-level and state-level data visuals to provide support for the MCA's projects. 
 
 ### State-level
-<img src="docs/img/tiers.png" width="400px" height='450px'>
+<img src="img/tiers.png" width="400px" height='450px'>
 
 This visualization represents the MCA's current broadband investments throughout the state. The different tiers demonstrate varying levels of broadband access, with 0 being the lowest level of access and 5 being the highest.
 
 ### County-level 
-<img src="docs/img/county.png" width="400px" width="450px">
+<img src="img/county.png" width="400px" width="450px">
 
 This interactive visualization represents the MCA's current broadband investments on a county-level. The different layers show underserved areas, maybe underserved areas, density of unserved areas, as well as the same access-tiers as the state-level visual. 
 
@@ -45,7 +45,6 @@ To view the data, please refer to the [county](./county) directory of this repos
 ## Running The Code 
 
 A [Makefile](./Makefile) has been created to streamline code compilation. To execute, clone the vaccines repository to your local drive & run the makefile outlined below.
-
 ***(need to expand this if this is the direction we want to go in)***
 
 1. 
