@@ -36,7 +36,6 @@ fig, ax = plt.subplots(figsize=(16,10))
 counties.plot(ax = ax, color='white', label="County Border")
 c = ax._children[0]
 c.set_edgecolors("#000000")
-# c.set_zorder(2) # this ensures it's drawn first
 
 for tier, gdf in tiers.items():
     gdf.plot(ax = ax, label=names[tier], color=colors[tier])
