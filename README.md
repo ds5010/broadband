@@ -53,4 +53,7 @@ A [Makefile](./Makefile) has been created to streamline code compilation.
 
 This process will take several minutes to complete.
 
-There is also a make recipe (```make dev```) for running a development server for the purposes of updating the gh-pages site.
+Depending on the changes to the data, you may also want to update the .png tier maps used in this README and the gh-pages site [docs](docs/) by running ```make map```.
+
+There is also a recipe (```make dev```) for running a development server for the purposes of updating the gh-pages site.
+
