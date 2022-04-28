@@ -52,3 +52,5 @@ A [Makefile](./Makefile) has been created to streamline code compilation.
 2. Run ```make split``` to split all files by county and update the data subsets in the ['county/'](county/) subdirectory.
 
 This process will take several minutes to complete.
+
+There is also a make recipe (```make dev```) for running a development server for the purposes of updating the gh-pages site.
