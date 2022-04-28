@@ -10,6 +10,10 @@ src:
 split:
 	python -B src/split_by_maine_county.py
 
-# Run a basic development server to debug docs
+# Run a basic development server to debug the gh-pages site
 dev:
 	python -m http.server -d docs
+
+# Generate a static tier map for the gh-pages site and README
+map:
+	python -B src/tier_map.py
