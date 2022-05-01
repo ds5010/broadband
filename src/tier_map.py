@@ -3,7 +3,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import glob
 
-files = glob.glob("src/raw_data/tier*")
+files = glob.glob("src/raw_data/tier-[!0]*")
 # print("Found ",files)
 tiers = {}
 for file in files:
@@ -14,7 +14,7 @@ print("Using", len(tiers), "tiers.")
 counties = gpd.read_file('src/county_boundaries/Maine_County_Boundary_Polygons_Dissolved_Feature.geojson')
 
 colors = {
-    "tier-0": "#d73027",
+    # "tier-0": "#d73027",
     "tier-1": "#f46d43",
     "tier-2": "#fdae61",
     "tier-3": "#abd9e9",
@@ -23,7 +23,7 @@ colors = {
 }
 
 names = {
-    "tier-0": "Tier 0",
+    # "tier-0": "Tier 0",
     "tier-1": "Tier 1",
     "tier-2": "Tier 2",
     "tier-3": "Tier 3",
