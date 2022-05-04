@@ -1,195 +1,256 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="The students in DS5010 Spring 2022" />
+    <title>Broadband Project</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="The students in DS5010 Spring 2022">
-  <title>Broadband Project</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 56px;
+        /* make room for the fixed-top navbar */
+      }
+    </style>
+  </head>
 
-  <style>
-    body {
-      padding-top: 56px;
-      /* make room for the fixed-top navbar */
-    }
-  </style>
-</head>
-
-<body>
-
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#visuals">Visuals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#map">Map</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
-          </li>
-        </ul>
-        <a href="http://github.com/ds5010/broadband" class="nav-item align-right mx-2">
-          <img src="github.png" width="32px" />
-        </a>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#visuals">Visuals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#map">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
+            </li>
+          </ul>
+          <a
+            href="http://github.com/ds5010/broadband"
+            class="nav-item align-right mx-2"
+          >
+            <img src="github.png" width="32px" />
+          </a>
+        </div>
       </div>
-    </div><!-- /.container -->
-  </nav>
+      <!-- /.container -->
+    </nav>
 
-  <div class="container">
-
-    <div class="row pt-2">
-      <div class="col">
-        <div class="p-5 bg-light rounded-3 border">
-          <h1 class="display-5 fw-bold">What would it take to get broadband to every Mainer?</h1>
-          <p class="fs-4">The <a href="https://www.maineconnectivity.org/">Maine Connectivity Authority (MCA)</a> was established in 2021 and charged with the goal
-            achieving universal access of affordable high-speed broadband in Maine. Broadband access varies
-            significantly across geographic areas and is generally worse in rural areas than in more developed
-            areas.
-        </div>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
-
-    <div id="visuals" class="row align-items-md-stretch p-2">
-      <div class="col-md-12">
-        <div class="clearfix">
-          <img src="tiers.png" style='float:right; margin-right:10px;'>
-          <h2>Internet speed varies across Maine.</h2>
-          <p>With rare exceptions, the internet that reaches your house must travel through a series of connections
-            along existing roadways. The speed of the connection depends on a variety of factors, including the age of
-            the infrastructure and the distance your signal must travel. The map on the right shows the differing levels
-            of internet speed across Maine.</p>
-          <p>
-            In general, the blue areas indicate fast enough internet speed to conceivably work or study from home,
-            whereas the red areas represent parts of the state that may not have sufficient connection to access the
-            same resources and opportunities that a faster internet connection could facilitate.
-          </p>
-          <h2>What can we do about it?</h2>
-          <p>The MCA is focused on three strategic areas:
-            <li>Projects: Optimize broadband deployment</li>
-            <li>Places: Reach the last mile</li>
-            <li>People: Advance digital equity for all</li>
-          </p>
-          <p>
-            To be effective in addressing the State’s connectivity needs there needs to be continuous
-            interaction between the Projects and mechanisms that enable impact; Place-based investments
-            that enable last mile connectivity through a clear and constant process, and an ongoing focus on
-            how funding, process, and priorities link to and leverage the People in most need.
-          </p>
-          <h2>Learn about disparities in internet access using our interactive mapping tool</h2>
-          <p>The interactive map below illustrates levels of internet connectivity across Maine counties. 
-            Select a county and tier of internet access to compare service in your local community vs. elsewhere in the state.
-          </p>
-          <h3>What do the tiers mean?</h3>
-            <li>Tiers 0, 1 and 2 indicate areas with little to no internet access. 
-              Even where there is service, users may have trouble video conferencing 
-              or streaming high-definition video. </li>
-            <li>Tiers 3 and 4 indicate areas with download speeds ranging from 25-100 
-              Megabytes per second (Mbps). For smaller households, this speed may be sufficient 
-              for many casual needs like gaming or streaming entertainment; larger households 
-              may struggle with bandwidth for telecommuting or remote learning needs.</li>
-            <li>Tier 5 shows areas with download and upload speeds in excess of 100 Mbps. 
-              These areas are well-served by the current network.</li>
-          <p>
-            To see examples of recommended access speeds based on internet usage and size of household, 
-            visit the FCC’s website <a href="https://www.fcc.gov/consumers/guides/household-broadband-guide">here</a>. 
-          </p>
-          <p>
-            Have questions about internet access in your area? You can reach the Maine Connectivity Authority 
-            <a href="https://www.maineconnectivity.org/contact">here</a>.
-          </p>  
-        </div>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
-
-    <div id="map" class="row align-items-md-stretch p-1">
-      <div class="col-md-3 p-1">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <p class="fs-4">Select a County</p>
-          <div id="observable-counties" class="pb-3">
+    <div class="container">
+      <div class="row pt-2">
+        <div class="col">
+          <div class="p-5 bg-light rounded-3 border">
+            <h1 class="display-5 fw-bold">
+              What would it take to get broadband to every Mainer?
+            </h1>
+            <p class="fs-4">
+              The
+              <a href="https://www.maineconnectivity.org/"
+                >Maine Connectivity Authority (MCA)</a
+              >
+              was established in 2021 and charged with the goal achieving
+              universal access of affordable high-speed broadband in Maine.
+              Broadband access varies significantly across geographic areas and
+              is generally worse in rural areas than in more developed areas.
+            </p>
           </div>
-          <div id="observable-buttons" class="pb-3">
-          </div>
-          <p class="fs-4">Select a Data Source</p>
-          <div id="observable-type" class="pb-3">
-          </div>
-          <p class="fs-4">Instructions</p>
-          <p>Select a county to change geographic focus of the map on the right. 
-             Select a data source to view different layers on top of the map.</p>
         </div>
-      </div><!-- /.col -->
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
 
-      <div class="col-md-9 p-1">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Map</h2>
-          <div id="observable-map" class="ratio ratio-1x1">
+      <div id="visuals" class="row align-items-md-stretch p-2">
+        <div class="col-md-12">
+          <div class="clearfix">
+            <img src="tiers.png" style="float: right; margin-right: 10px" />
+            <h2>Internet speed varies across Maine.</h2>
+            <p>
+              With rare exceptions, the internet that reaches your house must
+              travel through a series of connections along existing roadways.
+              The speed of the connection depends on a variety of factors,
+              including the age of the infrastructure and the distance your
+              signal must travel. The map on the right shows the differing
+              levels of internet speed across Maine.
+            </p>
+            <p>
+              In general, the blue areas indicate fast enough internet speed to
+              conceivably work or study from home, whereas the red areas
+              represent parts of the state that may not have sufficient
+              connection to access the same resources and opportunities that a
+              faster internet connection could facilitate.
+            </p>
+            <h2>What can we do about it?</h2>
+            <p>
+              The MCA is focused on three strategic areas:
+              <li>Projects: Optimize broadband deployment</li>
+              <li>Places: Reach the last mile</li>
+              <li>People: Advance digital equity for all</li>
+            </p>
+            <p>
+              To be effective in addressing the State’s connectivity needs there
+              needs to be continuous interaction between the Projects and
+              mechanisms that enable impact; Place-based investments that enable
+              last mile connectivity through a clear and constant process, and
+              an ongoing focus on how funding, process, and priorities link to
+              and leverage the People in most need.
+            </p>
+            <h2>
+              Learn about disparities in internet access using our interactive
+              mapping tool
+            </h2>
+            <p>
+              The interactive map below illustrates levels of internet
+              connectivity across Maine counties. Select a county and tier of
+              internet access to compare service in your local community vs.
+              elsewhere in the state.
+            </p>
+            <h3>What do the tiers mean?</h3>
+            <li>
+              Tier 5 shows areas with download and upload speeds in excess of
+              100 Mbps. These areas are well-served by the current network.
+            </li>
+            <li>
+              Tiers 3 and 4 indicate areas with download speeds ranging from
+              25-100 Megabytes per second (Mbps). For smaller households, this
+              speed may be sufficient for many casual needs like gaming or
+              streaming entertainment; larger households may struggle with
+              bandwidth for telecommuting or remote learning needs.
+            </li>
+            <li>
+              Tiers 1 and 2 indicate areas with little to no internet access.
+              Even where there is service, users may have trouble video
+              conferencing or streaming high-definition video.
+            </li>
+
+            <p>
+              To see examples of recommended access speeds based on internet
+              usage and size of household, visit the FCC website
+              <a
+                href="https://www.fcc.gov/consumers/guides/household-broadband-guide"
+                >here</a
+              >.
+            </p>
+            <p>
+              Have questions about internet access in your area? You can reach
+              the Maine Connectivity Authority
+              <a href="https://www.maineconnectivity.org/contact">here</a>.
+            </p>
           </div>
-          <p class="fs-4">Speed Infomation</p>
-          <p> Both download and upload speeds of tier 5 are greater than 100MB/s.</p>
-          <p>Download speeds of Tier 4 are between 50Mb/s and 100Mb/s, and upload speeds are between 10Mb/s and 100Mb/s.</p>
-          <p>Download speeds of Tier 3 are between 25 Mb/s and 50 Mb/s, and upload speeds are between 3 Mb/s and 10 Mb/s.</p>
-          <p>Download speeds of Tier 2 range from 10Mb/s to 25Mb/s, and upload speeds range from 1 Mb/s to 3 Mb/s.</p>
-          <p>Download speeds of Tier 1 are between 0Mb/s and 10Mb/s, and upload speeds are below 1 Mb/s.</p>
-          <p>Tier 0 has no address range</p>
         </div>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
 
-    <div id="acknowledgements" class="row align-items-md-stretch pt-2">
-      <div class="col-md-12">
-        <div class="p-5 mb-6 bg-light border rounded-3">
-          <p class="fw-bold fs-4">Acknowledgements</p>
-          <p>Data and guidance provided by 
-             <a href="https://www.maineconnectivity.org/">Maine Connectivity Authority</a>.
-          </p>
-          <p>Developed by DS5010 students at The Roux Institute, Northeastern University, Spring 2022.</p>
+      <div id="map" class="row align-items-md-stretch p-1">
+        <div class="col-md-3 p-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <p class="fs-4">Select a County</p>
+            <div id="observable-counties" class="pb-3"></div>
+            <div id="observable-buttons" class="pb-3"></div>
+            <p class="fs-4">Select a Tier</p>
+            <div id="observable-type" class="pb-3"></div>
+            <p class="fs-4">Instructions</p>
+            <p>
+              Select a county to change geographic focus of the map on the
+              right. Select a data source to view different layers on top of the
+              map.
+            </p>
+          </div>
         </div>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
+        <!-- /.col -->
 
-    <footer class="pt-2 mt-2 text-muted border-top">
-      &copy; 2022 DS5010
-    </footer>
-  </div><!-- /.container -->
+        <div class="col-md-9 p-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Map</h2>
+            <div id="observable-map" class="ratio ratio-1x1"></div>
+            <p class="fs-4">Internet speeds by county and tier</p>
+            <ul>
+              <li>Tier 5: Download & upload speeds exceed 100 MB/s</li>
+              <li>Tier 4: Download 50-100 Mb/s, upload 10-100 Mb/s</li>
+              <li>Tier 3: Download 25-50 Mb/s, upload 3-10 Mb/s</li>
+              <li>Tier 2: Download 10-25 Mb/s, upload 1-3 Mb/s</li>
+              <li>Tier 1: Download below 10Mb/s, upload below 1 Mb/s</li>
+            </ul>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-  <script type="module">
+      <div id="acknowledgements" class="row align-items-md-stretch pt-2">
+        <div class="col-md-12">
+          <div class="p-5 mb-6 bg-light border rounded-3">
+            <p class="fw-bold fs-4">Acknowledgements</p>
+            <p>
+              Data and guidance provided by
+              <a href="https://www.maineconnectivity.org/"
+                >Maine Connectivity Authority</a
+              >.
+            </p>
+            <p>
+              Developed by DS5010 students at The Roux Institute, Northeastern
+              University, Spring 2022.
+            </p>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
 
-    // Load the Observable runtime and inspector.
-    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      <footer class="pt-2 mt-2 text-muted border-top">
+        &copy; 2022 DS5010
+      </footer>
+    </div>
+    <!-- /.container -->
 
-    // Your notebook, compiled as an ES module.
-    import notebook from "https://api.observablehq.com/d/a9e917990e3d4594.js?v=3";
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script type="module">
+      // Load the Observable runtime and inspector.
+      import {
+        Runtime,
+        Inspector,
+      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 
-    // Load the notebook, rendering the value of each cell into the provided DOM node.
-    new Runtime().module(notebook, name => {
-      if (name === "viewof counties") {
-//        return new Inspector(document.querySelector("#observable-counties"));
-      }
-      if (name === "map") {
-        return new Inspector(document.querySelector("#observable-map"));
-      }
-      if (name === "viewof type") {
-        return new Inspector(document.querySelector("#observable-type"));
-      }
-      if (name === "viewof buttons") {
-        return new Inspector(document.querySelector("#observable-buttons"));
-      }
-      if (name === "data") return true;
-      if (name === "initialize") return true;
-    });
+      // Your notebook, compiled as an ES module.
+      import notebook from "https://api.observablehq.com/d/a9e917990e3d4594.js?v=3";
 
-  </script>
-</body>
-
+      // Load the notebook, rendering the value of each cell into the provided DOM node.
+      new Runtime().module(notebook, (name) => {
+        if (name === "viewof counties") {
+          //        return new Inspector(document.querySelector("#observable-counties"));
+        }
+        if (name === "map") {
+          return new Inspector(document.querySelector("#observable-map"));
+        }
+        if (name === "viewof type") {
+          return new Inspector(document.querySelector("#observable-type"));
+        }
+        if (name === "viewof buttons") {
+          return new Inspector(document.querySelector("#observable-buttons"));
+        }
+        if (name === "data") return true;
+        if (name === "initialize") return true;
+      });
+    </script>
+  </body>
 </html>
